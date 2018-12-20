@@ -1,0 +1,22 @@
+html, body { margin: 0;}
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.button {
+  background-color: #f31ca7;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Plandoo Reminder</title>
+    <link rel="stylesheet" href="src/css/custom.css">
+</head>
+
+<body>
+    <div class="flex-container">
+        <image id="loader" src="src/image/rotating-balls-spinner.svg" style="display: none" />
+        <div class="content" id="content">
+            <input type="text" placeholder="Enter Employee ID" id="emp_id" />
+            <input class="button" type="button" id="save" value="Save" />
+        </div>
+    </div>
+    <script>
+        // I do not want to be closed
+        window.onbeforeunload = (e) => {
+            // Unlike usual browsers that a message box will be prompted to users, returning
+            // a non-void value will silently cancel the close.
+            // It is recommended to use the dialog API to let the user confirm closing the
+            // application.
+            // e.returnValue = false // equivalent to `return false` but not recommended
+        }
+    </script>
+    <script src="src/js/config.js" charset="utf-8"></script>
+</body>
+
+</html>

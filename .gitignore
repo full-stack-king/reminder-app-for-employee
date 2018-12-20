@@ -1,0 +1,15 @@
+#directories
+bower_components
+node_modules
+dist
+
+#files
+*.tgz
+*.log
+.DS_Store
+Thumbs.db
+
+# ignore everything in 'app' folder what had been generated from 'src' folder
+# /app/app.js
+# /app/background.js
+# /app/**/*.map

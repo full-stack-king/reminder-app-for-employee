@@ -1,0 +1,46 @@
+{
+  "name": "plandoo-reminder",
+  "productName": "Plandoo Reminder",
+  "homepage": "http://plandoo.heptagon.tech/",
+  "version": "1.0.2",
+  "description": "A reminder application for Plandoo entry",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "deb64": "electron-installer-debian --src dist/app-linux-x64/ --dest dist/installers/ --arch amd64",
+    "dist": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Raja K <raja.k@heptagon.in>",
+  "license": "ISC",
+  "build": {
+    "appId": "hep.cbe",
+    "asar": true,
+    "productName": "plandoo-reminder",
+    "copyright": "Copyright © Heptagon Technologies",
+    "linux": {
+      "target": [
+        "deb"
+      ],
+      "maintainer": "Raja K <raja.k@heptagon.in>",
+      "category": "Utility",
+      "description": "A reminder application for Plandoo entry",
+      "artifactName": "${productName}-${version}-${arch}.${ext}"
+    },
+    "deb": {
+      "synopsis": "Plandoo Desktop App",
+      "afterInstall": "./scripts/debian-add-repo.sh",
+      "afterRemove": "./scripts/debian-uninstaller.sh"
+    }
+  },
+  "devDependencies": {
+    "electron": "^3.0.10",
+    "electron-builder": "^20.38.3"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "electron-store": "^2.0.0",
+    "mongoose": "^5.4.0",
+    "validator": "^10.9.0"
+  }
+}
